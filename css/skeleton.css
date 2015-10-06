@@ -34,7 +34,11 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .column,
 .columns {
   width: 100%;
