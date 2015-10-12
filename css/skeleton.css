@@ -28,7 +28,14 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#instafeed {
 
+  right: 0%;
+  width: 50%;
+  padding: 4em;
+  float:right;
+  background-color: #white;
+  }
 
 .container {
   position: absolute;
