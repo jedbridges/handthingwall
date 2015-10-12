@@ -30,11 +30,8 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #instafeed {
 
-  right: 0%;
-  width: 50%;
-  padding: 4em;
-  float:right;
-  background-color: #white;
+  width: 40%;
+  float: right;
   }
 
 .container {
@@ -47,6 +44,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+
 }
 .column,
 .columns {
