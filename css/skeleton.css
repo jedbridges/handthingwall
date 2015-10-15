@@ -29,20 +29,31 @@
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #instafeed {
+<<<<<<< Updated upstream
   max-width:320px;
+=======
+>>>>>>> Stashed changes
   width: 40%;
   height: 100%;
   float: right;
+<<<<<<< Updated upstream
   box-shadow: 0px 0px 80px rgba(36,35,40, .5);
   margin-right:5em;
 }
+=======
+  right: auto;
+  }
+>>>>>>> Stashed changes
+
+#instafeed a{
+  padding: 4px
+    }
 
 .container {
   position: absolute;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
   box-sizing: border-box;
   top: 50%;
   left: 50%;
