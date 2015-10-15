@@ -29,9 +29,12 @@
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #instafeed {
+  max-width:320px;
   width: 40%;
   height: 100%;
   float: right;
+  box-shadow: 0px 0px 80px rgba(36,35,40, .5);
+  margin-right:5em;
 }
 
 .container {
