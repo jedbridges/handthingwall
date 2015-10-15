@@ -40,7 +40,7 @@
 .container {
   position: absolute;
   width: 100%;
-  max-width: 960px;
+  max-width: 480;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
