@@ -28,8 +28,6 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
 #instafeed {
   max-width:306px;
   width: 50%;
@@ -144,7 +142,6 @@ html {
   font-size: 62.5%;
   height: 100%;
 }
-
 body {
   height: inherit;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
