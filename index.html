@@ -66,14 +66,21 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="instafeed.js-master/instafeed.min.js"></script>
+  <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="jquery.cycle2.min.js"></script>
+  <script type="text/javascript" src="jquery.cycle2.carousel.min.js"></script>
+
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,100,300,400italic,500italic' rel='stylesheet' type='text/css'>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -85,20 +92,44 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
+
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 100%">
+      <div class="one-half column">
         <h1>#<a href="https://instagram.com/explore/tags/handthingwall/">HandThingWall</a></h1>
         <h3>Share your favorite things!</h3>
-        <p>How It Works: Create an image composed of a hand, a thing, and a wall. Post it to Instagram with the #<a href="https://instagram.com/explore/tags/handthingwall/">HandThingWall</a> tag.</p>
+        <p>How It Works: Create an image containing a hand, a thing, and a wall. Post it to Instagram with the #<a href="https://instagram.com/explore/tags/handthingwall/">HandThingWall</a> tag.</p>
         <button>Promote Your Thing</button>
       </div>
     </div>
   </div>
+
+<div id="instafeed"><script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'handthingwall',
+        clientId: '1de0d02156054e9fb20f728e7f91d14b',
+        limit: 40,
+        resolution: 'low_resolution',
+        after: function() {
+          $('#instafeed').cycle({
+            slides: 'a',
+            fx: 'carousel',
+            carouselVisible: 5,
+            carouselFluid: true,
+            carouselVertical: true
+          });
+        }
+    });
+    feed.run();
+</script>
+
+</div>
+
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
