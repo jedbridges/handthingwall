@@ -66,6 +66,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="css/hover-min.css" rel="stylesheet" media="all">
+
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type="text/javascript" src="instafeed.js-master/instafeed.min.js"></script>
@@ -115,6 +119,7 @@
         clientId: '1de0d02156054e9fb20f728e7f91d14b',
         limit: 40,
         resolution: 'low_resolution',
+        sortBy: 'most-liked',
         after: function() {
           $('#instafeed').cycle({
             slides: 'a',
@@ -127,8 +132,6 @@
     });
     feed.run();
 </script>
-
-</div>
 
 
 <!-- End Document

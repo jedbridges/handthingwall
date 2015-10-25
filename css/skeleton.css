@@ -28,27 +28,35 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
 #instafeed {
-  max-width:320px;
-  width: 40%;
+  max-width:306px;
+  width: 50%;
   height: 100%;
   float: right;
   box-shadow: 0px 0px 80px rgba(36,35,40, .5);
-  margin-right:5em;
+  margin-right:10%;
+  background-color: white;
 }
+
+#instafeed a {
+
+}
+
 
 .container {
   position: absolute;
   width: 100%;
-  max-width: 960px;
+  max-width: 480;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-
 }
+
 .column,
 .columns {
   width: 100%;
@@ -136,6 +144,7 @@ html {
   font-size: 62.5%;
   height: 100%;
 }
+
 body {
   height: inherit;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
