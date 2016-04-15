@@ -39,10 +39,10 @@ class Instafeed
   # MAKE IT GO!
   run: (url) ->
     # make sure either a client id or access token is set
-    if typeof @options.clientId isnt 'string'
+    if typeof @options.clientId isn't 'string'
       unless typeof @options.accessToken is 'string'
         throw new Error "Missing clientId or accessToken."
-    if typeof @options.accessToken isnt 'string'
+    if typeof @options.accessToken isn't 'string'
       unless typeof @options.clientId is 'string'
         throw new Error "Missing clientId or accessToken."
 
@@ -78,7 +78,7 @@ class Instafeed
   # Data parser (must be a json object)
   parse: (response) ->
     # throw an error if not an object
-    if typeof response isnt 'object'
+    if typeof response isn't 'object'
       # either throw an error or call the error callback
       if @options.error? and typeof @options.error is 'function'
         @options.error.call(this, 'Invalid JSON data')
@@ -87,7 +87,7 @@ class Instafeed
         throw new Error 'Invalid JSON response'
 
     # check if the api returned an error code
-    if response.meta.code isnt 200
+    if response.meta.code isn't 200
       # either throw an error or call the error callback
       if @options.error? and typeof @options.error is 'function'
         @options.error.call(this, response.meta.error_message)
@@ -116,7 +116,7 @@ class Instafeed
       @context.nextUrl = response.pagination.next_url
 
     # before images are inserted into the DOM, check for sorting
-    if @options.sortBy isnt 'none'
+    if @options.sortBy isn't 'none'
       # if sort is set to random, don't check for polarity
       if @options.sortBy is 'random'
         sortSettings = ['', 'random']
@@ -255,7 +255,7 @@ class Instafeed
       when "popular" then endpoint = "media/popular"
       when "tagged"
         # make sure a tag is defined
-        if typeof @options.tagName isnt 'string'
+        if typeof @options.tagName isn't 'string'
           throw new Error "No tag name specified. Use the 'tagName' option."
 
         # set the endpoint
@@ -263,7 +263,7 @@ class Instafeed
 
       when "location"
         # make sure a location id is defined
-        if typeof @options.locationId isnt 'number'
+        if typeof @options.locationId isn't 'number'
           throw new Error "No location specified. Use the 'locationId' option."
 
         # set the endpoint
@@ -271,11 +271,11 @@ class Instafeed
 
       when "user"
         # make sure there is a user id set
-        if typeof @options.userId isnt 'number'
+        if typeof @options.userId isn't 'number'
           throw new Error "No user specified. Use the 'userId' option."
 
         # make sure there is an access token
-        if typeof @options.accessToken isnt 'string'
+        if typeof @options.accessToken isn't 'string'
           throw new Error "No access token. Use the 'accessToken' option."
 
         endpoint = "users/#{@options.userId}/media/recent"
